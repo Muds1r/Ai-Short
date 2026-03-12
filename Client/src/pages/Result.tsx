@@ -92,8 +92,7 @@ const Result = () => {
                             {!project.generatedVideo ? (
                                 <PrimaryButton onClick={handleGenerateVideo} disabled={isGenerating} className="w-full">
                                     {isGenerating ?
-                                        (<>Generating Video...</>) :
-                                        (
+                                        (<>Generating Video...</>) : (
                                             <> <SparkleIcon className="size-4" />
                                                 Generate Video </>
                                         )}
