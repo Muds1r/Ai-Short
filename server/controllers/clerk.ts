@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { verifyWebhook } from '@clerk/express/webhooks'
 import { prisma } from '../config/prisma.js';
+import * as Sentry from "@sentry/node"
 
 
 const clerkWebhooks = async (req: Request, res: Response) => {
