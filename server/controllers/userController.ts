@@ -10,7 +10,7 @@ export const getUserCredits = async (req: Request, res: Response) => {
         if (!userId) { return res.status(401).json({ message: 'Unauthorized' }) }
 
         const user = await prisma.user.findUnique({
-            where: { id: userId }
+            where: { id: userId, }
         })
         res.json({ credits: user?.credits })
 
@@ -65,11 +65,12 @@ export const toggleProjectPublic = async (req: Request, res: Response) => {
         const { userId } = req.auth();
         const { projectId } = req.params;
 
-        const project = await prisma.project.findFirst({
+        const project = await prisma.project.findUnique({
             where: {
                 id: projectId,
                 userId: userId
             }
+
         })
 
         if (!project) { return res.status(404).json({ message: 'Project not found' }) }
