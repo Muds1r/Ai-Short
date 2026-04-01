@@ -73,7 +73,7 @@ export default function Hero() {
                                 viewport={{ once: true }}
                                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.2 }}
                             >
-                                Upload product images and a model photo - our AI instantly prodcues professional lifestyle imagery and shot-form videos optimized for commercials & Reels.
+                                Upload product images and a model photo -AI instantly produces professional lifestyle imagery and shot-form videos optimized for commercials & Reels.
                             </motion.p>
 
                             <motion.div className="flex flex-col sm:flex-row items-center gap-4 mb-8"
